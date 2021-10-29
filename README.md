@@ -124,9 +124,9 @@ A CountVectorizer works by creating a new column for every unique word that appe
 
 After tallying up the frequency of words, I produced a WordCloud to visualize the results. Here the biggest words indicate a higher frequency, from left to right here we have a representation for the full company, business branch 1, and business branch 2:
 
-![Total Word Cloud](images/total_wordcloud.jpg)
-![C1 Word Cloud](images/c1_wordcloud.jpg)
-![C2 Word Cloud](images/c2_wordcloud.jpg)
+<img src="images/total_wordcloud.jpg" width="200">
+<img src="images/c1_wordcloud.jpg" width="200">
+<img src="images/c2_wordcloud.jpg" width="200">
 
 Before I move to modelling, we explore some of the trends within the data including reviewing the sending behavior per year, month, and day. We can see in the graphs below that the company launched in 2016 but has since been relatively consistent with their sending behavior and the majority of their emails are sent on a Friday.
 
