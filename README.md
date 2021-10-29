@@ -124,16 +124,18 @@ A CountVectorizer works by creating a new column for every unique word that appe
 
 After tallying up the frequency of words, I produced a WordCloud to visualize the results. Here the biggest words indicate a higher frequency, from left to right here we have a representation for the full company, business branch 1, and business branch 2:
 
-<p float="center">
+<p align="center">
 <img src="images/total_wordcloud.jpg" width="200">
 <img src="images/c1_wordcloud.jpg" width="200">
 <img src="images/c2_wordcloud.jpg" width="200">
 </p>
 Before I move to modelling, we explore some of the trends within the data including reviewing the sending behavior per year, month, and day. We can see in the graphs below that the company launched in 2016 but has since been relatively consistent with their sending behavior and the majority of their emails are sent on a Friday.
 
-<img src="images/c2_emailsgrouped.jpg" width="100">
-<img src="images/c2_emailsperyear" width="100">
-<img src="images/c2_emailsperday.jpg" width="100">
+<p align="center">
+<img src="images/c2_emailsgrouped.jpg" width="500">
+<img src="images/c2_emailsperyear.jpg" width="250">
+<img src="images/c2_emailsperday.jpg" width="250">
+</p>
 
 Finally, I see how this newsletter compares to the global benchmarks for email marketing. Here I do not include the benchmarking for 2021 as that year is not complete yet, and a reminder that our 2016 data is also an incomplete year.
 
