@@ -189,13 +189,13 @@ Here are the results. As expected with a small data-set we see a high variance i
 CTOR Modelling
 </p>
 <p align="center">
-<img src="images/ctor_models.png" width="350">
+<img src="images/ctor_models.png" width="450">
 </p>
 <p align="center">
 OR Modelling
 </p>
 <p align="center">
-<img src="images/or_models.png" width="350">
+<img src="images/or_models.png" width="450">
 </p>
 
 ### Evaluation
