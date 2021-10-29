@@ -11,8 +11,8 @@ This project was completed as part of the General Assembly Data Science Immersiv
 ### Repository Contents
 
 * Notebooks:
-** CTOR newsletter
-** OR newsletter
+* Sub CTOR newsletter
+* Sub OR newsletter
 * Images
 * Saved models
 * Saved plot PDFs
@@ -56,7 +56,7 @@ There are of course other factors at play such as demographics, position of the 
 
 Email marketing is used to promote a business, whether that be a product or service. It is also a key tool in strengthening the company brand and the relationship between the business and the user.
 
-At first, email was just a system for internal communication to help with company productivity and workflow; today, we send and receive over 319 billion emails a day and it is predicted that number will reach 376 billion by 2025.
+At first, email was just a system for internal communication to help with company productivity and workflow; today, we send and receive over 319 billion emails a day and it is predicted that number will reach 376 billion by 2025<sup>1</sup>.
 
 OR and CTOR are important metrics when it comes to email marketing as it tells the business how engaged their users are with the content.
 
@@ -130,9 +130,9 @@ After tallying up the frequency of words, I produced a WordCloud to visualize th
 
 Before I move to modelling, we explore some of the trends within the data including reviewing the sending behavior per year, month, and day. We can see in the graphs below that the company launched in 2016 but has since been relatively consistent with their sending behavior and the majority of their emails are sent on a Friday.
 
-![C2 grouped](images/c2_emailsgrouped.jpg)
-![C2 Year](images/c2_emailsperyear.jpg)
-![C2 Day](images/c2_emailsperday.jpg)
+<img src="images/c2_emailsgrouped.jpg" width="100">
+<img src="images/c2_emailsperyear" width="100">
+<img src="images/c2_emailsperday.jpg" width="100">
 
 Finally, I see how this newsletter compares to the global benchmarks for email marketing. Here I do not include the benchmarking for 2021 as that year is not complete yet, and a reminder that our 2016 data is also an incomplete year.
 
