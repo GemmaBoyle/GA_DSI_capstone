@@ -152,8 +152,7 @@ Unfortunately, this newsletter is underperforming when it comes to initial open 
 Source: <a href url="https://dma.org.uk/uploads/misc/emailbenchmarkingreport2020.pdf">2015-2019 Email Benchmark Data</a>
 Source: <a href url="https://www.campaignmonitor.com/resources/guides/global-email-benchmarks-archive/">2020 Email Benchmark Data</a>
 
-|     | <td colspan=3>Actual | <td colspan=3>Benchmark |
-| Year | OR | CR | CTOR | OR | CR | CTOR |
+| Year | Actual OR | Actual CR | Actual CTOR | Benchmark OR | Benchmark CR | Benchmark CTOR |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2016 | 0.089 | 0.007 | 0.119 | 0.19 | 0.02 | 0.11 |
 | 2017 | 0.091 | 0.014 | 0.230 | 0.19 | 0.02 | 0.11 |
@@ -187,10 +186,10 @@ I run the following models first with all features (month, and subject) and then
 Here are the results. As expected with a small data-set we see a high variance in the scoring. Too many features and not enough data creates a risk of overfitting, or the model being too sensitive to the input data, resulting in a big range of results when training the model on unseen data (high variance). Normally this can be fixed with feature reduction, however that was not the case here so it is likely we will need more data to reduce that variance.
 
 <p align="center">
-CTOR Modelling
-<img src="images/ctor_models.png" width="350">
-OR Modelling
-<img src="images/or_models.png" width="350">
+    CTOR Modelling
+    <img src="images/ctor_models.png" width="350">
+    OR Modelling
+    <img src="images/or_models.png" width="350">
 </p>
 
 ### Evaluation
