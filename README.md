@@ -186,10 +186,16 @@ I run the following models first with all features (month, and subject) and then
 Here are the results. As expected with a small data-set we see a high variance in the scoring. Too many features and not enough data creates a risk of overfitting, or the model being too sensitive to the input data, resulting in a big range of results when training the model on unseen data (high variance). Normally this can be fixed with feature reduction, however that was not the case here so it is likely we will need more data to reduce that variance.
 
 <p align="center">
-    CTOR Modelling
-    <img src="images/ctor_models.png" width="350">
-    OR Modelling
-    <img src="images/or_models.png" width="350">
+CTOR Modelling
+</p>
+<p align="center">
+<img src="images/ctor_models.png" width="350">
+</p>
+<p align="center">
+OR Modelling
+</p>
+<p align="center">
+<img src="images/or_models.png" width="350">
 </p>
 
 ### Evaluation
