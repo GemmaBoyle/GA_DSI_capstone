@@ -135,8 +135,8 @@ Before I move to modelling, we explore some of the trends within the data includ
 <img src="images/c2_emailsgrouped.jpg">
 </p>
 <p align="center">
-<img src="images/c2_emailsperyear.jpg" width="350">
-<img src="images/c2_emailsperday.jpg" width="350">
+<img src="images/c2_emailsperyear.jpg" width="330">
+<img src="images/c2_emailsperday.jpg" width="370">
 </p>
 
 Finally, I see how this newsletter compares to the global benchmarks for email marketing. Here I do not include the benchmarking for 2021 as that year is not complete yet, and a reminder that our 2016 data is also an incomplete year.
@@ -152,7 +152,7 @@ Unfortunately, this newsletter is underperforming when it comes to initial open 
 Source: <a href url="https://dma.org.uk/uploads/misc/emailbenchmarkingreport2020.pdf">2015-2019 Email Benchmark Data</a>
 Source: <a href url="https://www.campaignmonitor.com/resources/guides/global-email-benchmarks-archive/">2020 Email Benchmark Data</a>
 
-|     |: Actual :|: Benchmark :|
+|     | <td colspan=3>Actual | <td colspan=3>Benchmark |
 | Year | OR | CR | CTOR | OR | CR | CTOR |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2016 | 0.089 | 0.007 | 0.119 | 0.19 | 0.02 | 0.11 |
@@ -187,15 +187,10 @@ I run the following models first with all features (month, and subject) and then
 Here are the results. As expected with a small data-set we see a high variance in the scoring. Too many features and not enough data creates a risk of overfitting, or the model being too sensitive to the input data, resulting in a big range of results when training the model on unseen data (high variance). Normally this can be fixed with feature reduction, however that was not the case here so it is likely we will need more data to reduce that variance.
 
 <p align="center">
-
 CTOR Modelling
-
 <img src="images/ctor_models.png" width="350">
-
 OR Modelling
-
 <img src="images/or_models.png" width="350">
-
 </p>
 
 ### Evaluation
@@ -218,13 +213,13 @@ In order to check the robustness of our model, we take a closer look at the OR a
 The features pulled from our two top models tell us a story. Both indicate "resumo" and "retrospectiva" as important features however with the Logistic Regression we can infer that the relationship there is negative. Upon closer inspection we can infer that these keywords have a positive influence on OR but a negative influence on CTOR indicating that readers have no interest in clicking further to the website. For example, a user may be opening an email interested in reading a recap of the news however, upon opening the email, realises they have already read all of the articles and does not click further.
 
 <p align="center">
-<img src="images/resumo.png">
+<img src="images/resumo.png" width="700">
 </p>
 
 We also investigate some artist names and find further segmentations. In all instances the effect on OR is always opposite to that of CTOR. Here, an example could be that only fans of that artist bother opening the email and once opened, they are keen to click through and read the latest news. 
 
 <p align="center">
-<img src="images/nervosa.png">
+<img src="images/nervosa.png"  width="700">
 </p>
 
 ### Limitations
