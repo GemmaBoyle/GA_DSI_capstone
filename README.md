@@ -125,16 +125,18 @@ A CountVectorizer works by creating a new column for every unique word that appe
 After tallying up the frequency of words, I produced a WordCloud to visualize the results. Here the biggest words indicate a higher frequency, from left to right here we have a representation for the full company, business branch 1, and business branch 2:
 
 <p align="center">
-<img src="images/total_wordcloud.jpg" width="200">
-<img src="images/c1_wordcloud.jpg" width="200">
-<img src="images/c2_wordcloud.jpg" width="200">
+<img src="images/total_wordcloud.jpg" width="300">
+<img src="images/c1_wordcloud.jpg" width="300">
+<img src="images/c2_wordcloud.jpg" width="300">
 </p>
 Before I move to modelling, we explore some of the trends within the data including reviewing the sending behavior per year, month, and day. We can see in the graphs below that the company launched in 2016 but has since been relatively consistent with their sending behavior and the majority of their emails are sent on a Friday.
 
 <p align="center">
-<img src="images/c2_emailsgrouped.jpg" width="500">
-<img src="images/c2_emailsperyear.jpg" width="250">
-<img src="images/c2_emailsperday.jpg" width="250">
+<img src="images/c2_emailsgrouped.jpg">
+</p>
+<p align="center">
+<img src="images/c2_emailsperyear.jpg" width="350">
+<img src="images/c2_emailsperday.jpg" width="350">
 </p>
 
 Finally, I see how this newsletter compares to the global benchmarks for email marketing. Here I do not include the benchmarking for 2021 as that year is not complete yet, and a reminder that our 2016 data is also an incomplete year.
@@ -143,12 +145,14 @@ A high click-to-open rate indicates that the content resonates strongly with you
 
 Unfortunately, this newsletter is underperforming when it comes to initial open rates, but the ones that do open are loving the content and very click happy!
 
-![C2 benchmark](images/c2_benchmark.jpg)
+<p align="center">
+<img src="images/c2_benchmark.jpg">
+</p>
 
 Source: <a href url="https://dma.org.uk/uploads/misc/emailbenchmarkingreport2020.pdf">2015-2019 Email Benchmark Data</a>
 Source: <a href url="https://www.campaignmonitor.com/resources/guides/global-email-benchmarks-archive/">2020 Email Benchmark Data</a>
 
-|     | Actual | Benchmark |
+|     |: Actual :|: Benchmark :|
 | Year | OR | CR | CTOR | OR | CR | CTOR |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2016 | 0.089 | 0.007 | 0.119 | 0.19 | 0.02 | 0.11 |
@@ -165,7 +169,9 @@ It is worth noting that this data set is small, so we are expecting some varianc
 
 The modelling is done using a pipeline that includes a ColumnTransformer reformatting the newsletter subject as previously described with the CountVectorizer, and also a OneHotEncoder for the month variable that we decide to include. This creates a column for each month and adds a 1 in the column if the newsletter was sent in that month.
 
-![Pipeline](images/Pipeline.png)
+<p align="center">
+<img src="images/Pipeline.png" width="350">
+</p>
 
 Note that day was not included in the modelling since we know from the EDA that most (66%) emails are sent on a Friday.
 
@@ -180,13 +186,17 @@ I run the following models first with all features (month, and subject) and then
 
 Here are the results. As expected with a small data-set we see a high variance in the scoring. Too many features and not enough data creates a risk of overfitting, or the model being too sensitive to the input data, resulting in a big range of results when training the model on unseen data (high variance). Normally this can be fixed with feature reduction, however that was not the case here so it is likely we will need more data to reduce that variance.
 
+<p align="center">
+
 CTOR Modelling
 
-![Pipeline](images/Pipeline.png)
+<img src="images/ctor_models.png" width="350">
 
 OR Modelling
 
-![Pipeline](images/Pipeline.png)
+<img src="images/or_models.png" width="350">
+
+</p>
 
 ### Evaluation
 
@@ -207,11 +217,15 @@ In order to check the robustness of our model, we take a closer look at the OR a
 
 The features pulled from our two top models tell us a story. Both indicate "resumo" and "retrospectiva" as important features however with the Logistic Regression we can infer that the relationship there is negative. Upon closer inspection we can infer that these keywords have a positive influence on OR but a negative influence on CTOR indicating that readers have no interest in clicking further to the website. For example, a user may be opening an email interested in reading a recap of the news however, upon opening the email, realises they have already read all of the articles and does not click further.
 
-![Pipeline](images/Pipeline.png)
+<p align="center">
+<img src="images/resumo.png">
+</p>
 
 We also investigate some artist names and find further segmentations. In all instances the effect on OR is always opposite to that of CTOR. Here, an example could be that only fans of that artist bother opening the email and once opened, they are keen to click through and read the latest news. 
 
-![Pipeline](images/Pipeline.png)
+<p align="center">
+<img src="images/nervosa.png">
+</p>
 
 ### Limitations
 
